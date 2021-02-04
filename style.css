@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style our button */
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 0.8;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
