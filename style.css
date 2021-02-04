@@ -12,10 +12,46 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+/* Styles for our form */
+form {
+  width: 300px;
+  height: 320px;
+  background-color: white;
+  border-radius: 20px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px dashed #aaa;
+  margin: 8px;
+  outline: none;
+}
+
+form button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
 }
 
 /* Style our button */
-button {
+#btn {
   padding: 10px 20px;
   cursor: pointer;
   border: 1px solid white;
@@ -23,8 +59,41 @@ button {
   background-color: transparent;
   color: white;
   transition: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-button:hover {
+#btn:hover {
   transform: scale(1.2);
+}
+
+@keyframes move0ut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes moveIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.move-out {
+  animation: moveOut 1s linear forwards;
+}
+
+.move-in {
+  animation: moveIn 1s linear forwards;
 }
